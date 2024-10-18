@@ -1,0 +1,10 @@
+Algoritmo Año_Bisiesto
+	Definir valor_año Como entero
+	Escribir "Digite el año";
+	Leer valor_año
+	Si (valor_año mod 4) ==0 Entonces
+		escribir "El año es bisiesto"
+	SiNo
+		escribir "El año no es Bisiesto"
+	Fin Si
+FinAlgoritmo

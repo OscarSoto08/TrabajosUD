@@ -1,0 +1,17 @@
+Router: Es el dispositivo que determina la mejor ruta para que los paquetes de datos 
+lleguen de forma rapida y eficaz a su destino, este dispositivo asigna las direcciones
+IP, gestiona el trafico con calidad de servicio y la seguridad mediante firewalls
+
+Modem:
+Es la sigla de modulador-demodulador, y basicamente al recibir la red en cables de 
+banda ancha convierte las señales analogicas en digitales que pueden ser interpretadas
+por computadores
+
+Punto de acceso:
+Es un amplificador de red inalambrica que normalmente viene integrado a los router
+aunque puede ser conectado, y no tiene la capacidad de enrutar la red
+
+Internet:
+Es una red de redes global que las interconecta mediante varios protocolos y permite
+la emision y recepcion de datos desde distintas partes del mundo
+

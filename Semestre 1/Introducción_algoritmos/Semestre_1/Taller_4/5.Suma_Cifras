@@ -1,0 +1,16 @@
+Algoritmo Suma_Cifras
+	Definir n1, suma Como Entero;
+	Escribir "Ingresa un número de tres cifras"
+	leer n
+	suma = 0 
+	Si (n>99) y (n<1000) Entonces
+	mientras n > 0 Hacer
+		suma = suma + (n mod 10)
+		n = trunc(n/10)
+	FinMientras
+	Escribir "La suma de los digitos es: " ,suma
+Sino 
+	escribir "el número no tiene 3 digitos"
+	fin si
+	
+FinAlgoritmo

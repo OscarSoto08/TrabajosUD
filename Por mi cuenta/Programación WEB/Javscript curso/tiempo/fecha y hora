@@ -1,0 +1,37 @@
+
+/*¿Como crear una fecha?*/
+//primera forma
+// OBJETO DATE
+
+let fechaActual = new Date;
+console.log(fechaActual.getDate())
+console.log(fechaActual.getDay()+1) //Los dias de la semana empiezan desde 0
+console.log(fechaActual.getHours())
+console.log(fechaActual.getMinutes())
+console.log(fechaActual.getSeconds())
+console.log(fechaActual.getFullYear())
+console.log(fechaActual.getMonth()+1)
+
+//Formas de sacar el TIMESTAMP: (Milisegundos) 01 de enero --> Actualidad
+
+console.log(Date.now()); //Solo disponible para navegadoores con una versión mayor a 8
+console.log(fechaActual.getTime())
+console.log(+fechaActual)
+
+
+//segunda forma
+//enviandole el timestamp al constructor Date
+console.log(Date(1722297097955))
+
+//tercera forma
+//a traves de un string
+
+console.log(new Date('2024 07 29 06:57:17'))
+console.log(new Date('2024/07/29'))
+console.log(new Date('2024-07-29'))
+
+
+//Cuarta forma:
+//Atraves de parametros AAAA,MM,DD,h,m,s,ms
+console.log(new Date(2021,1))
+

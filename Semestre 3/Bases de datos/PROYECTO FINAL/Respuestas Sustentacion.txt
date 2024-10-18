@@ -1,0 +1,98 @@
+punto 1. 
+
+-- Información del premio mas reciente
+select a.award_id, a.award_name, a.award_description, max(a.year_introduced)
+from award a
+
+
+punto 2.
+
+-- Equipos de la región South America ordenados por nombre
+select te.team_id, te.team_name, conf.confederation_name
+from teams te join confederation conf on (conf.confederation_id = te.confederation_confederation_id)
+where te.confederation_confederation_id = 4
+order by te.team_name
+
+punto 3.
+
+-- Posiciones relacionadas con el medio campo ordenadas alfabéticamente de menor a mayor
+select p.player_id, p.family_name, p.given_name, p.birth_date, pos.position_name
+from player_has_position pp join player p on (p.player_id = pp.Player_player_id)
+join position pos on pp.Position_position_id = pos.position_id
+where pp.Position_position_id = 3
+order by p.family_name desc
+
+punto 4.
+
+-- 10 torneos con mayor cantidad de goles ordenados de mayor a menor indicando el
+-- campeón del torneo
+
+select t.tournament_name, count(g.tournament_id)
+from goal g join tournament t on (g.tournament_id = t.tournament_id)
+group by t.tournament_id
+
+punto 5. 
+
+-- Paises que has sido sede mas de una vez ordenados por cantidad y alfabéticamente
+
+select mat.match_name, st.country_name, count(st.country_name) conteo
+from matches mat join stadium st on (st.stadium_id = mat.stadium_stadium_id)
+group by st.country_name
+order by conteo desc
+
+punto 6.
+
+-- Jugadores con mayor cantidad de premios superior a 2 premios ordenados de mayor a
+menor y alfabéticamente por apellido indicando
+
+select p.player_id, p.family_name, p.given_name, count(pa.Player_player_id) as conteo
+from player_has_award pa join player p on (pa.Player_player_id = p.player_id)
+group by p.player_id
+order by conteo DESC
+
+
+punto 7. 
+
+-- Jugadores con mayor cantidad de goles superior a 10 goles ordenados de mayor a
+-- menor y alfabéticamente por apellido indicando
+
+select p.player_id, p.family_name, p.given_name, count(g.Player_player_id) as conteo
+from player p join goal g on (p.player_id = g.Player_player_id)
+group by p.player_id
+having conteo > 10
+order by conteo desc
+
+punto 8. 
+
+-- Jugadores con mayor cantidad de torneos ordenados de mayor a menor y
+-- alfabeticamente por apellido con al menos 5 participaciones indicando el año del torneo de
+-- su primera y ultima participación.
+
+select p.player_id, p.family_name ap,p.given_name,pt.count_tournaments Cantidad_Torneos, min(pt.Tournament_tournament_id) Primera_Participacion, max(pt.Tournament_tournament_id) Ultima_participacion
+from player p join player_tournaments pt on (p.player_id = pt.Player_player_id)
+group by p.player_id
+having Cantidad_Torneos >= 5
+order by Cantidad_Torneos desc
+
+
+punto 9.
+
+-- Mujeres con al menos 21 partidos jugados y hombres con al menos 22 partidos jugados
+-- ordenados por genero, cantidad de partidos y apellido
+
+select p.player_id, p.family_name, p.given_name, count(pa.match_match_id) cantPartidos, p.female esMujer
+from player p 
+join player_appearance pa on (p.player_id = pa.Player_player_id)
+group by p.player_id, p.family_name, p.given_name, p.female
+having (p.female = 1 and cantPartidos >= 21) or (p.female = 0 and cantPartidos >= 22)
+order by p.female desc, cantPartidos desc, p.family_name;
+
+punto 10. 
+
+-- Cantidad de jugadores que nunca jugaron ni un solo partido
+
+select count(p.player_id) as cantJugadoresSinPartidos
+from player p
+left join player_appearance pa on p.player_id = pa.Player_player_id
+where pa.match_match_id is null;
+

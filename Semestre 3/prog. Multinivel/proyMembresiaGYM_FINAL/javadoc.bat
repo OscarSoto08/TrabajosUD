@@ -1,0 +1,1 @@
+javadoc -d docs -sourcepath src -classpath "libs\jcalendar-1.4.jar;libs\itextpdf-5.4.0.jar" -subpackages control:modelo:vista

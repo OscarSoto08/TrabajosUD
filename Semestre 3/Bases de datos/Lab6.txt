@@ -1,0 +1,21 @@
+INSERT INTO Curso (nombre, TipoCurso_idTipoCurso, Programa_idPrograma) VALUES
+('Introducción a algoritmos', 4, 11);
+
+INSERT INTO Estudiante (idEstudiante, nombre, apellido, correo, clave, periodoIngreso, fechaNacimiento, genero, estado) VALUES
+(120, 'Oscar', 'Gonzalez', 'oagonzalezs@udistrital.edu.co','Jkt.Iwdfy.1.31',  '2023-1', '2005-08-14', 'M', '1');
+
+
+INSERT INTO Referencia (Profesor_idProfesor, Curso_idCurso, Estudiante_idEstudiante, periodo, comentario, pros, contras, fecha, dominio, metodologia, exigencia, amabilidad, puntualidad, imparcialidad, actitud, cumplimientoSyllabus, dificultadParciales, estado, RangoNota_idRangoNota) VALUES
+(1, 2, 120, '2024-1', 'Es un profesor que de forma sustancial maneja una metodología entretenida, lo que hace que  sus clases sean entretenidas, adicionalmente, es un profesor que domina bien el temario de la asignatura, que en mi criterio es importante al momento de enseñar, y en general me agrada porque sabe qué enseñar y como enseñar', NULL, NULL, '2024-04-08', 5, 5, 4, 5, 5, 4, 5, 5, 3, 1, NULL),
+(5, 10, 120, '2023-1', 'Es una profesora que exp1ica de manera conscisa pero fácil de entender, conoce mucho el tema y como docente es muy organizada y asimismo exige orden a sus estudiantes', NULL, NULL, '2024-04-08', 5, 5, 3, 5, 5, 4, 5, 5, 3, 1, NULL),
+(10, 9, 120, '2023-3', 'Es un profesor que explica bien el tema pero en ocasiones suele desviarse y aunque las clases con el son divertidas casi no hay exigencia hacia los estudiantes, sus parciales son muy faciles y opino que la metodología de aprendizaje puede mejorar', NULL, NULL, '2024-04-08', 3, 1, 2, 5, 2, 4, 5, 3, 1, 1, NULL);
+
+
+select  e.idEstudiante as idEst, e.nombre as nomEst,
+		e.apellido as apEst, p.nombre as profNom, p.apellido as profAp,
+        c.nombre as nomCurso,  r.comentario as comentario
+from Estudiante e, Profesor p, Referencia r, Curso c
+where e.idEstudiante = r.Estudiante_idEstudiante and 
+	  e.idEstudiante = 120 and
+      p.idProfesor = r.Profesor_idProfesor and
+      c.idCurso = r.Curso_idCurso;

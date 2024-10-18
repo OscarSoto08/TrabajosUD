@@ -1,0 +1,6 @@
+select  e.idEstudiante as idEst, e.nombre as nomEst,
+		e.apellido as apEst, e.correo as correoEst, 
+        e.periodoIngreso as pIngreso, e.fechaNacimiento as fNac,
+        e.genero as genero
+from Estudiante e
+where e.idEstudiante = 120;

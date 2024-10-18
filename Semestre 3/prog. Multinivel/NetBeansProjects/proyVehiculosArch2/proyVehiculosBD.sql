@@ -1,0 +1,1 @@
+alter table vehiculo add foreign key(nroF) references factura(nroF);

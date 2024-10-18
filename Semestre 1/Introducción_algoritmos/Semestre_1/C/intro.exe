@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+ main ()
+ { 
+      char *mensaje1 = "bienvenido a C";
+      char *mensaje2 = "Te alegrará haberme conocido";
+      char nombre[50];
+      
+      system("cls");
+      printf("Cuál es tu nombre");
+      gets(nombre);
+      printf("\n%s %s\n %s\n", mensaje1, nombre, mensaje2);
+      }
+      

@@ -1,0 +1,33 @@
+Ejercicio 1: 
+-> Cantidad de profesores con promedio mayor a 4 por programa
+
+USE refud;
+SELECT prog.nombre AS programa, COUNT(*) AS cantidad_profesores_promedio_mayor_4
+FROM (
+    SELECT prof.idProfesor, c.Programa_idPrograma AS idPrograma,
+           AVG((r.actitud + r.amabilidad + r.cumplimientoSyllabus + r.dificultadParciales + r.dominio + r.exigencia + r.imparcialidad + r.metodologia + r.puntualidad) / 9) AS promedio
+    FROM profesor prof, referencia r, curso c
+    WHERE prof.idProfesor = r.Profesor_idProfesor
+            AND c.idCurso = r.Curso_idCurso
+    GROUP BY prof.idProfesor, c.Programa_idPrograma
+    HAVING promedio > 4
+) AS subCon, programa prog
+WHERE subCon.idPrograma = prog.idPrograma
+GROUP BY prog.nombre;
+
+Ejercicio 2:
+-> Calificacion promedio mayor y menor por profesor
+
+USE refud;
+SELECT proff.idProfesor AS idProfesor,
+	   proff.nombre AS Nombre, 
+       MAX(promedio) AS Maxima,
+       MIN(promedio) AS Minima
+FROM (
+    SELECT r.Profesor_idProfesor,
+           AVG((r.actitud + r.amabilidad + r.cumplimientoSyllabus + r.dificultadParciales + r.dominio + r.exigencia + r.imparcialidad + r.metodologia + r.puntualidad) / 9) AS promedio
+    FROM profesor prof, referencia r
+    WHERE prof.idProfesor = r.Profesor_idProfesor
+    GROUP BY r.Profesor_idProfesor
+) AS subconsulta, profesor proff
+GROUP BY proff.idProfesor;

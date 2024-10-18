@@ -1,0 +1,371 @@
+:root{
+    --colorBG1: #efe5d4;
+    --colorBG2: #d7cab3;
+    --VerdeOliva: #283618;
+}
+
+*{
+    font-family: "Forum", sans-serif;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+header{
+    margin: 0;
+    /*! position: absolute; */
+    width: 100%;
+    height: 60px;
+    background: var(--VerdeOliva);
+    display: flex;
+    /*! flex-direction: column; */
+    align-items: center;
+}
+
+nav{
+    width: 50%;
+    position: absolute;
+    left: 50%;
+
+    color: white;
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 30px;
+    color: white;
+    padding-left: 30px;
+}
+
+nav>ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+ul li{
+    font-size: 0px;
+}
+li a{
+    font-size: 20px;
+    color: white;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.login-page{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--colorBG1), var(--colorBG2));
+    opacity: 0;
+    animation: log-page 3s ease forwards;
+    animation-delay: 3s;
+
+}
+
+@keyframes log-page{
+    0%{
+        opacity: 0;
+        width: 0;
+    }
+
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.container-login{
+    position: absolute;
+    left: 0;
+    top:0;
+    min-width: 100%;
+    height: 100vh;
+}
+
+.log-card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 500px;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background-color: #c5c879;
+    box-shadow: 0 10px 20px rbga(0,0,0,0.5);
+    border-radius: 10px;
+    animation: expand 2s cubic-bezier(0.74, 1, 0.2, 1) forwards;
+    animation-delay: 0;
+    opacity: 0;
+}
+
+@keyframes expand {
+    0%{
+        opacity: 0;
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 500px;
+    }
+}
+
+.log-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center !important;
+}
+
+.log-box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: rgba(0,0,0, 0.8);
+    animation: log-box 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation-delay: 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center !important;
+}
+
+.form-group{
+    margin-bottom: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.form-control{
+    position: absolute;
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rbga(0,0,0,0.5);
+    height: 3rem;
+}
+
+@keyframes log-box {
+    0%{
+        right: 0;
+        width: 0;
+    }
+    50%{
+        right: 0;
+        width: 100%;
+    }
+    100%{
+        right: 100%;
+        width: 0;
+    }
+}
+.form-logo{
+    text-align: center;
+}
+
+.form-logo img{
+    width: 150px;
+    height:150px;
+}
+
+.form-title{
+    text-align: center;
+    margin: 10px;
+}
+
+.form-title h4{
+    padding: 10px;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.login-btn{
+    padding: 5px 25px;  
+    text-align: center;
+    border: 2px solid #c5c879;
+    text-decoration: none;
+    background-color: #7f9956;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+    height: 40px;
+}
+
+.login-btn:hover{
+    transition: all .5s ease-in-out;
+    border-radius: 0 22px;
+    background-color: #fff !important;
+    color: black !important;
+}
+.block1{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 0%;
+    height: 100vh;
+    background: var(--VerdeOliva) !important;
+    animation: slide-right 2s cubic-bezier(0.74, 0.86, 0.4, 0.82) forwards;
+}
+
+.block2{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 0%;
+    height: 100vh;
+    background: #d4b736 !important;
+    animation: slide-right 2s cubic-bezier(0.74, 0.86, 0.4, 0.82) forwards;
+    animation-delay: 1s;
+}
+
+.block3{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 0%;
+    height: 100vh;
+    background: #14171a  !important;
+    animation: slide-right 2s cubic-bezier(0.74, 0.86, 0.4, 0.82) forwards;
+    animation-delay: 2s;
+}
+
+@keyframes slide-right {
+    0%{
+        right: 0;
+        width: 0;
+    }
+    50%{
+        right: 0;
+        width: 100%;
+    }
+    0%{
+        right: 100%;
+        width: 0;
+    }
+}
+
+.loader{
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.loader ul li{
+    margin: 0 12px;
+    font-size: 60px;
+    font-weight: 600;
+    display: inline-block;
+    color: #fff ;
+    opacity: 0;
+    transform: translateX(0px);
+    animation: load 3s ease-in-out forwards;
+    animation-delay: 1;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    20%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+}
+
+.loader ul li:nth-child(1){
+    animation-delay: 1s;
+}
+.loader ul li:nth-child(2){
+    animation-delay: 1.2s;
+}
+.loader ul li:nth-child(3){
+    animation-delay: 1.3s;
+}
+.loader ul li:nth-child(4){
+    animation-delay: 1.44s;
+}
+.loader ul li:nth-child(5){
+    animation-delay: 1.5s;
+}
+.loader ul li:nth-child(6){
+    animation-delay: 1.6s;
+}
+.loader ul li:nth-child(7){
+    animation-delay: 1.7s;
+}
+.loader ul li:nth-child(8){
+    animation-delay: 1.8s;
+}
+.loader ul li:nth-child(9){
+    animation-delay: 1.9s;
+}
+.loader ul li:nth-child(10){
+    animation-delay: 2s;
+}
+
+
+/*fin de las transiciones */
+
+
+/*CSS PARA EL INICIO*/
+
+.container-home{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #14171a;
+
+}
+
+.corredor-home{
+    background-color: 0;
+    opacity: 0;
+    right: 0;
+    animation: slide-right  
+}
+
+@keyframes slide-right {
+    0%{
+        right: 0;
+        width: 0;
+    }
+    50%{
+        right: 0;
+        width: 100%;
+    }
+    0%{
+        right: 100%;
+        width: 0;
+    }
+}

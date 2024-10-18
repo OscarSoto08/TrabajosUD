@@ -1,0 +1,19 @@
+create table Empleado(
+	id int auto_increment primary key,
+    nombre varchar(45) not null
+);
+
+create table Departamento(
+	codigo int auto_increment primary key,
+    nombre varchar(45) not null
+);
+
+create table Trabajo(
+	id_Emp int,
+    cod_Depto int,
+    fecha_i date not null default current_timestamp,
+    fecha_f date null default current_timestamp,
+    primary key(id_Emp, cod_Depto),
+    foreign key(id_Emp) references Empleado(id),
+    foreign key(cod_Depto) references Departamento(codigo)
+);

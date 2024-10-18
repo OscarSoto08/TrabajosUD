@@ -1,0 +1,615 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{siunitx} % Para alinear números correctamente
+
+\title{\textbf{Ejercicios 1.2 y 1.3}}
+\author{Diego Arturo López Reyes y Oscar Alejandro Gonzalez Soto}
+\date{September 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Ejercicios 1.2}
+\subsection{Ejercicio 2}
+Determine el mayor intervalo en que debe estar p* para aproximar p con un error relativo de a lo sumo $10^{-4}$ para cada valor de p.
+\\ \\
+a. $\pi$  \hspace{1cm} b. e \hspace{1cm} c. $\sqrt{2}$ \hspace{1cm} d. $\sqrt[3]{7}$
+\\ \\
+Solución:\\\\
+A.\\
+p = $\pi$ = 3.141592653589793\\
+
+\begin{equation}
+    |p-p*|<=10^{-4}*\pi\\    
+\end{equation}
+\begin{equation}
+    = |p-p*|<=0.0003141592653589793\\
+\end{equation}
+\begin{equation}
+    = p*\epsilon [\pi-0.0003141592653589793,\pi+0.0003141592653589793]\\
+\end{equation}
+\begin{equation}
+    = p*\epsilon [3.141278494324434,3.141906812855172]\\
+\end{equation}
+B.\\
+p=e=2.718281828459045
+\begin{equation}
+    |p-p*|<=10^{-4}*e
+\end{equation}
+\begin{equation}
+    |p-p*|<=0.0002718281828459045
+\end{equation}
+\begin{equation}
+    p*\epsilon [e-0.0002718281828459045,e+0.0002718281828459045]
+\end{equation}
+\begin{equation}
+    p*\epsilon [2.718009999276199,2.718553657641891]
+\end{equation}
+C.\\
+p=$\sqrt{2}$=1.4142135623730951
+\begin{equation}
+    |p-p*|<=10^{-4}*\sqrt{2}
+\end{equation}
+\begin{equation}
+    |p-p*|<=0.0001414213562373095
+\end{equation}
+\begin{equation}
+p*\epsilon [\sqrt{2}-0.0001414213562373095,\sqrt{2}+0.0001414213562373095]
+\end{equation}
+\begin{equation}
+p*\epsilon [1.4140721400168577,1.4143549847293325]
+\end{equation}
+D.\\
+p=$\sqrt[3]{7}$=1.913977864565236
+\begin{equation}
+    |p-p*|<=10^{-4}*\sqrt[3]{7}
+\end{equation}
+\begin{equation}
+    |p-p*|<=0.0001913977864565236
+\end{equation}\textbf{}
+\begin{equation}
+    p*\epsilon [\sqrt[3]{7}-0.0001913977864565236,\sqrt[3]{7}+0.0001913977864565236]
+\end{equation}
+\begin{equation}
+    p*\epsilon [1.912739785,1.913122581]
+\end{equation}
+\subsection{Ejercicio 4}
+Realice los siguientes calculos(i)en forma exacta (ii)mediante una aritmetica de truncamiento a tres cifras y (iii)con una aritmetica de redondeo a tres cifras (iv)calcule los errores relativos en los incisos (ii) y (iii).\\
+A. $\frac{4}{5}+\frac{1}{3}$ \hspace{1cm} B. $\frac{4}{5}*\frac{1}{3}$ \hspace{1cm} C. $(\frac{1}{3}-\frac{3}{11})+\frac{3}{20}$ \hspace{1cm} D. $(\frac{1}{3}+\frac{3}{11})-\frac{3}{20}$\\\\\\
+solucion\\
+A.\\
+
+(i)
+\begin{equation}
+    \frac{4}{5}+\frac{1}{3}=1.13333
+\end{equation}
+(ii)
+\begin{equation}
+    1.13333=1.13
+\end{equation}
+(iii)
+\begin{equation}
+    1.13333=1.13
+\end{equation}
+(iv)
+\begin{equation}
+   Error\hspace{0.1cm}relativo=\frac{|valor\hspace{0.1cm}exacto-valor\hspace{0.1cm}aproximado|}{|valor\hspace{0.1cm}exacto|}
+\end{equation}
+\begin{equation}
+  truncadoER=\frac{|1.13333-1.13|}{|1.13333|}=\frac{0.00333}{1.13333}=2.93*10^{-3}\approx 3*10^{-3}
+\end{equation}
+\begin{equation}
+  redondeoER=\frac{|1.13333-1.13|}{|1.13333|}=\frac{0.00333}{1.13333}=2.93*10^{-3}\approx 3*10^{-3}
+\end{equation}
+B.\\
+(i)
+\begin{equation}
+    \frac{4}{5}*\frac{1}{3}=0.26666
+\end{equation}
+(ii)
+\begin{equation}
+    0.26666=0.266
+\end{equation}
+(iii)
+\begin{equation}
+    0.26666=0.267
+\end{equation}
+(iv)
+\begin{equation}
+   Error\hspace{0.1cm}relativo=\frac{|valor\hspace{0.1cm}exacto-valor\hspace{0.1cm}aproximado|}{|valor\hspace{0.1cm}exacto|}
+\end{equation}
+\begin{equation}
+  truncadoER=\frac{|0.26666-0.266|}{|0.26666|}\approx 2.47*10^{-3}
+\end{equation}
+\begin{equation}
+  redondeoER=\frac{|0.26666-0.267|}{|0.26666|}\approx 1.27*10^{-3}
+\end{equation}
+C.\\
+(i)
+\begin{equation}
+    (\frac{1}{3}-\frac{3}{11})+\frac{3}{20}=\frac{139}{660}\approx 0.21061
+\end{equation}
+(ii)
+\begin{equation}
+    0.21061=0.210
+\end{equation}
+(iii)
+\begin{equation}
+    0.21061=0.211
+\end{equation}
+(iv)
+\begin{equation}
+   Error\hspace{0.1cm}relativo=\frac{|valor\hspace{0.1cm}exacto-valor\hspace{0.1cm}aproximado|}{|valor\hspace{0.1cm}exacto|}
+\end{equation}
+\begin{equation}
+  truncadoER=\frac{|0.21061-0.210|}{|0.21061|}\approx 2.89*10^{-3}
+\end{equation}
+\begin{equation}
+  redondeoER=\frac{|0.21061-0.211|}{|0.21061|}\approx 1.85*10^{-3}
+\end{equation}
+D.\\
+(i)
+\begin{equation}
+    (\frac{1}{3}+\frac{3}{11})-\frac{3}{20}=\frac{301}{660}\approx 0.45606
+\end{equation}
+(ii)
+\begin{equation}
+    0.45606=0.456
+\end{equation}
+(iii)
+\begin{equation}
+    0.45606=0.456
+\end{equation}
+(iv)
+\begin{equation}
+   Error\hspace{0.1cm}relativo=\frac{|valor\hspace{0.1cm}exacto-valor\hspace{0.1cm}aproximado|}{|valor\hspace{0.1cm}exacto|}
+\end{equation}
+\begin{equation}
+  truncadoER=\frac{|0.45606-0.456|}{|0.45606|}\approx 1.31*10^{-4}
+\end{equation}
+\begin{equation}
+  redondeoER=\frac{|0.45606-0.456|}{|0.45606|}\approx 1.31*10^{-4}
+\end{equation}
+
+\subsection{Ejercicio 6}
+Use una aritmética de redondeo a cuatro cifras para los siguientes calculos. \\
+(i) Calcule el error absoluto y el error relativo con valor exacto determinado a por lo menos cinco cifras \\
+\begin{center}
+a. 133 + 0.921 \hspace{2cm} b. 133 - 0.499 \\ -- \\
+c. (121 - 0.327) - 119 \hspace{2cm} d. (121 - 119) -- 0.327 \\ -- \\
+e. $\frac{\frac{13}{14} - \frac{6}{7}}{2e - 5.4}$ \hspace{2cm} f. $-10\pi + 6e - \frac{3}{62}$ \\ -- \\
+g. ($\frac{2}{9}$) $.$ ($\frac{9}{7}$) \hspace{2cm} h. $\frac{\pi - \frac{22}{7}}{\frac{1}{17}}$
+\end{center}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{cccc}
+\hline \\
+ & Aproximación & Error Absoluto & Error Relativo \\\\
+\hline
+\\
+(a) & 133.9 & 0.021 & $1.568 \times 10^{-4}$ \\
+(b) & 132.5 & 0.001 & $7.55 \times 10^{-6}$ \\
+(c) & 1.700 & 0.027 & 0.01614 \\
+(d) & 1.673 & 0 & 0 \\
+(e) & 1.986 & 0.03246 & 0.01662 \\
+(f) & -15.16 & 0.005377 & $3.548 \times 10^{-4}$ \\
+(g) & 0.2857 & $1.429 \times 10^{-5}$ & $5 \times 10^{-5}$ \\
+(h) & -0.01700 & 0.0045 & 0.2092 \\ \\
+\hline
+\end{tabular}
+\caption{Valores redondeo, error relativo y absoluto. Ej. 5}
+\end{table}
+
+\subsection{Ejercicio 8}
+Use una aritmética de truncamiento a cuatro cifras para los siguientes calculos. \\
+(i) Calcule el error absoluto y el error relativo con valor exacto determinado a por lo menos cinco cifras \\
+
+\begin{center}
+a. 133 + 0.921 \hspace{2cm} b. 133 - 0.499 \\ -- \\
+c. (121 - 0.327) - 119 \hspace{2cm} d. (121 - 119) -- 0.327 \\ -- \\
+e. $\frac{\frac{13}{14} - \frac{6}{7}}{2e - 5.4}$ \hspace{2cm} f. $-10\pi + 6e - \frac{3}{62}$ \\ -- \\
+g. ($\frac{2}{9}$) $.$ ($\frac{9}{7}$) \hspace{2cm} h. $\frac{\pi - \frac{22}{7}}{\frac{1}{17}}$
+\end{center}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{cccc}
+\hline \\
+ & Aproximación & Error Absoluto & Error Relativo \\\\
+\hline
+\\
+(a) & 133.9 & 0.021 & $1.568 \times 10^{-4}$ \\
+(b) & 132.5 & 0.001 & $7.55 \times 10^{-6}$ \\
+(c) & 1.600 & 0.073 & 0.04363 \\
+(d) & 1.673 & 0 & 0 \\
+(e) & 1.983 & 0.02945 & 0.01508 \\
+(f) & -15.15 & 0.004622 & $3.050 \times 10^{-4}$ \\
+(g) & 0.2855 & $2.143 \times 10^{-5}$ & $7.5 \times 10^{-5}$ \\
+(h) & -0.01700 & 0.0045 & 0.2092 \\ \\
+\hline
+\end{tabular}
+\caption{Valores truncamiento, error relativo y absoluto. Ej. 5}
+\end{table}
+
+\subsection{Ejercicio 10}
+El numero \(e\), se puede definir como\( e = \sum_{n=0}^{\infty} \frac{1}{n!} \) donde $n! = n(n - 1) * ... * 2 * 1 $ para n $\neq$ 0 y 0! = 1. Calcule el error absoluto y el error relativo en las siguientes aproximaciones de $e$:
+
+\begin{center}
+a. \( e = \sum_{n=0}^{5} \frac{1}{n!} \) \hspace{2cm} b. \( e = \sum_{n=0}^{10} \frac{1}{n!} \)
+\end{center}
+
+\begin{align*}
+n &= 0: & S &= 1 \\
+n &= 1: & S &= 1 + \frac{1}{1!} = 2 \\
+n &= 2: & S &= 2 + \frac{1}{2!} = 2.5 \\
+n &= 3: & S &= 2.5 + \frac{1}{3!} = \frac{8}{3} \approx 2.6667 \\
+n &= 4: & S &= \frac{8}{3} + \frac{1}{4!} \approx 2.7083 \\
+n &= 5: & S &\approx 2.7167 \\
+n &= 6: & S &\approx 2.7181 \\
+n &= 7: & S &\approx 2.71825 \\
+n &= 8: & S &\approx 2.718278 \\
+n &= 9: & S &\approx 2.7182815 \\
+n &= 10: & S &\approx 2.718281801
+\end{align*}
+
+\begin{tabular}{cccc}
+\toprule
+Aproximación & Valor aproximado de $e$ & Error absoluto & Error relativo \\
+\midrule
+(a) & 2.7166667 & 0.0016152 & $5.9418 \times 10^{-4}$ \\
+(b) & 2.718281801 & $2.73 \times 10^{-8}$ & $1.00 \times 10^{-8}$ \\
+\bottomrule
+\end{tabular}
+
+\section{Ejercicios 1.3}
+\subsection{Ejercicio 1}
+A.\\
+Con aritmética de truncamiento de tres cifras, calcule la suma \( \sum_{i=1}^{100} \frac{1}{i^2} \). Utilice primero el método de sumar desde \( \frac{1}{1^2} \) a \( \frac{1}{100^2} \) y luego en orden inverso (de \( \frac{1}{100^2} \) a \( \frac{1}{1^2} \)). ¿Cuál método es más preciso? ¿Por qué?
+
+\subsection*{Método 1: Suma en orden directo (de \( \frac{1}{1^2} \) a \( \frac{1}{100^2} \))}
+
+Primero calculamos cada término de la serie \( \frac{1}{i^2} \), truncando cada resultado a tres cifras decimales, y luego sumamos. Los primeros 10 términos son:
+
+\[
+\begin{aligned}
+& \frac{1}{1^2} = 1.000, \\
+& \frac{1}{2^2} = 0.250, \\
+& \frac{1}{3^2} = 0.111, \\
+& \frac{1}{4^2} = 0.0625 \rightarrow 0.062, \\
+& \frac{1}{5^2} = 0.040, \\
+& \frac{1}{6^2} = 0.0277 \rightarrow 0.027, \\
+& \frac{1}{7^2} = 0.0204 \rightarrow 0.020, \\
+& \frac{1}{8^2} = 0.0156 \rightarrow 0.015, \\
+& \frac{1}{9^2} = 0.0123 \rightarrow 0.012, \\
+& \frac{1}{10^2} = 0.010.
+\end{aligned}
+\]
+
+Sumando estos primeros 10 términos truncados:
+
+\[
+S_{\text{directa}} = 1.000 + 0.250 + 0.111 + 0.062 + 0.040 + 0.027 + 0.020 + 0.015 + 0.012 + 0.010 = 1.547
+\]
+
+Este proceso continúa hasta \( i = 100 \), truncando cada término a tres cifras.
+
+\subsection*{Método 2: Suma en orden inverso (de \( \frac{1}{100^2} \) a \( \frac{1}{1^2} \))}
+
+Ahora repetimos el proceso, sumando en el orden inverso. Los primeros 5 términos en este caso son:
+
+\[
+\begin{aligned}
+& \frac{1}{100^2} = 0.0001 \rightarrow 0.000, \\
+& \frac{1}{99^2} = 0.0001 \rightarrow 0.000, \\
+& \frac{1}{98^2} = 0.0001 \rightarrow 0.000, \\
+& \frac{1}{97^2} = 0.0001 \rightarrow 0.000, \\
+& \frac{1}{96^2} = 0.0001 \rightarrow 0.000.
+\end{aligned}
+\]
+
+Dado que los primeros términos son muy pequeños, su truncamiento a tres cifras decimales produce muchos ceros al principio, lo que significa que el error acumulado es menor al comienzo. Continuamos sumando los términos más grandes hasta llegar a \( \frac{1}{1^2} = 1.000 \).
+
+\subsection*{Comparación de resultados}
+
+El primer método (suma en orden directo) genera errores más grandes debido al truncamiento de los primeros términos, que son más grandes en magnitud. En cambio, el segundo método (suma en orden inverso) acumula menos error porque comienza sumando términos pequeños, y el error de truncamiento es menos significativo en las primeras etapas de la suma.
+
+\subsection*{Conclusión}
+
+El \textbf{método inverso es más preciso}, ya que al sumar los términos más pequeños primero, se minimiza el error acumulado debido al truncamiento. Esto mejora la precisión en comparación con el método directo.
+
+\subsection*{Problema 1.b}
+
+Escriba un algoritmo para sumar la serie finita \( \sum_{i=1}^{n} x_i \) en orden inverso. El algoritmo sería el siguiente:
+
+\begin{verbatim}
+Algoritmo SumarSerieInversa(X, n)
+1. Inicializar Suma = 0
+2. Para i desde n hasta 1, hacer:
+     a. Suma = Suma + X[i]
+3. Retornar Suma
+\end{verbatim}
+\subsection{Ejercicio 2}
+
+El número \( e \) se define como la suma infinita:
+
+\[
+e = \sum_{n=0}^{\infty} \frac{1}{n!}
+\]
+\\
+donde $n!=n(n-1)...2.1$ para $n\neq0$ y $0!=1$ use aritmetica de truncamiento de cuatro cifras para calcular la siguiente aproximacion de e y determine los errores absoluto y relativo.\\
+A. $
+e \approx \sum_{n=0}^{5} \frac{1}{n!}
+$ \hspace{1cm} B. $
+e \approx \sum_{j=0}^{5} \frac{1}{(5 - j)!}
+$  \hspace{1cm} C. $
+e \approx \sum_{n=0}^{10} \frac{1}{n!}
+$ \\D. $
+e \approx \sum_{j=0}^{10} \frac{1}{(10 - j)!}
+$
+
+\subsubsection*{Parte a)}
+
+Se nos pide calcular una aproximación de \( e \) truncando la serie en \( n = 5 \):
+
+\[
+e \approx \sum_{n=0}^{5} \frac{1}{n!}
+\]
+
+Calculamos los términos de la serie:
+
+\[
+\frac{1}{0!} = 1, \quad \frac{1}{1!} = 1, \quad \frac{1}{2!} = 0.5, \quad \frac{1}{3!} = 0.1667, \quad \frac{1}{4!} = 0.04167, \quad \frac{1}{5!} = 0.008333
+\]
+
+Sumamos estos términos:
+
+\[
+e \approx 1 + 1 + 0.5 + 0.1667 + 0.04167 + 0.008333 = 2.7167
+\]
+
+Esta es la aproximación de \( e \) truncada a 4 cifras decimales.
+
+\subsubsection*{Parte b)}
+
+Ahora calculamos la suma modificada, invirtiendo los factoriales:
+
+\[
+e \approx \sum_{j=0}^{5} \frac{1}{(5 - j)!}
+\]
+
+Esto es equivalente a:
+
+\[
+e \approx \frac{1}{5!} + \frac{1}{4!} + \frac{1}{3!} + \frac{1}{2!} + \frac{1}{1!} + \frac{1}{0!}
+\]
+
+Calculamos los términos de nuevo:
+
+\[
+\frac{1}{5!} = 0.008333, \quad \frac{1}{4!} = 0.04167, \quad \frac{1}{3!} = 0.1667, \quad \frac{1}{2!} = 0.5, \quad \frac{1}{1!} = 1, \quad \frac{1}{0!} = 1
+\]
+
+Sumamos los términos:
+
+\[
+e \approx 0.008333 + 0.04167 + 0.1667 + 0.5 + 1 + 1 = 2.7167
+\]
+
+\subsubsection*{Parte c)}
+
+Ahora truncamos la serie en \( n = 10 \):
+
+\[
+e \approx \sum_{n=0}^{10} \frac{1}{n!}
+\]
+
+Calculamos los términos adicionales:
+
+\[
+\frac{1}{6!} = 0.001389, \quad \frac{1}{7!} = 0.0001984, \quad \frac{1}{8!} = 0.0000248, \quad \frac{1}{9!} = 0.00000276, \quad \frac{1}{10!} = 0.000000276
+\]
+
+Sumando estos términos adicionales al resultado anterior:
+
+\[
+e \approx 2.7167 + 0.001389 + 0.0001984 + 0.0000248 + 0.00000276 + 0.000000276 = 2.7183
+\]
+
+\subsubsection*{Parte d)}
+
+Ahora calculamos la suma modificada con el cambio en los índices factoriales:
+
+\[
+e \approx \sum_{j=0}^{10} \frac{1}{(10 - j)!}
+\]
+
+Este cálculo nos da el mismo resultado que la parte (c):
+
+\[
+e \approx 2.7183
+\]
+
+\subsubsection*{Errores absoluto y relativo}
+
+El valor exacto de \( e \) es aproximadamente \( e \approx 2.71828 \).
+
+\subsubsection*{Error absoluto}
+
+- Para las partes (a) y (b):
+
+\[
+\text{Error absoluto} \approx |2.7167 - 2.71828| = 0.00158
+\]
+
+- Para las partes (c) y (d):
+
+\[
+\text{Error absoluto} \approx |2.7183 - 2.71828| = 0.00002
+\]
+
+\subsubsection*{Error relativo}
+
+- Para las partes (a) y (b):
+
+\[
+\text{Error relativo} \approx \frac{0.00158}{2.71828} \approx 0.000581
+\]
+
+- Para las partes (c) y (d):
+
+\[
+\text{Error relativo} \approx \frac{0.00002}{2.71828} \approx 0.00000736
+\]
+
+3. La serie de Maclaurin para la función $\arctan(x)$ converge en $-1 < x \leq 1$ y está dada por
+\begin{equation}
+\arctan(x) = \lim_{n \to \infty} P_n(x) = \lim_{n \to \infty} \sum_{i=1}^n (-1)^{i+1} \frac{x^{2i-1}}{2i-1}.
+\end{equation}
+
+\subsection{Ejercicio 3}
+La serie de Maclaurin para la función $\arctan(x)$ converge en $-1 < x \leq 1$ y está dada por
+\begin{equation}
+\arctan(x) = \lim_{n \to \infty} P_n(x) = \lim_{n \to \infty} \sum_{i=1}^n (-1)^{i+1} \frac{x^{2i-1}}{2i-1}.
+\end{equation}
+a. Use el hecho de que $\tan(\frac{\pi}{4}) = 1$ para determinar el número de términos $n$ de la serie que debemos sumar para garantizar que $|4P_n(1) - \pi| < 10^{-3}$.
+
+b. El lenguaje de programación C++ requiere que el valor aproximado de $\pi$ esté dentro de $10^{-10}$. ¿Cuántos términos de la serie debemos sumar para obtener este grado de precisión?
+
+\subsubsection*{Inciso (a)}
+
+Sabemos que la serie de Maclaurin para la función $\arctan(x)$ está dada por:
+
+\[
+\arctan(x) = \sum_{i=1}^{\infty} (-1)^{i+1} \frac{x^{2i-1}}{2i-1}.
+\]
+
+Queremos utilizar el hecho de que $\tan\left(\frac{\pi}{4}\right) = 1$ para aproximar el valor de $\pi$. Para esto, evaluamos la serie en $x = 1$:
+
+\[
+\arctan(1) = \sum_{i=1}^{\infty} (-1)^{i+1} \frac{1}{2i-1} = \frac{\pi}{4}.
+\]
+
+Por lo tanto, la suma parcial de $n$ términos de la serie está dada por:
+
+\[
+P_n(1) = \sum_{i=1}^{n} (-1)^{i+1} \frac{1}{2i-1}.
+\]
+
+Multiplicamos esta expresión por 4 para obtener una aproximación de $\pi$:
+
+\[
+4P_n(1) = 4 \sum_{i=1}^{n} (-1)^{i+1} \frac{1}{2i-1}.
+\]
+
+El objetivo es encontrar el número de términos $n$ necesarios para que se cumpla la condición de error:
+
+\[
+|4P_n(1) - \pi| < 10^{-3}.
+\]
+
+\paragraph{ Paso 1: Estimación del error}
+
+El teorema de Leibniz para series alternadas nos dice que el error al truncar una serie alternada es menor que el valor absoluto del primer término no sumado. En este caso, el error viene dado por el término $(n+1)$ de la serie:
+
+\[
+\left| 4P_n(1) - \pi \right| \approx 4 \left| (-1)^{n+1} \frac{1}{2n+1} \right| = \frac{4}{2n+1}.
+\]
+
+\paragraph{ Paso 2: Desigualdad para el error}
+
+Queremos que el error sea menor que $10^{-3}$, por lo que planteamos la siguiente desigualdad:
+
+\[
+\frac{4}{2n+1} < 10^{-3}.
+\]
+
+\paragraph{ Paso 3: Resolución de la desigualdad}
+
+Resolvemos la desigualdad para $n$:
+
+\[
+\frac{4}{2n+1} < 10^{-3} \quad \Rightarrow \quad 4 < 10^{-3} (2n+1)
+\]
+
+\[
+4 < 0.001(2n+1) \quad \Rightarrow \quad \frac{4}{0.001} < 2n+1
+\]
+
+\[
+4000 < 2n+1 \quad \Rightarrow \quad 2n > 3999 \quad \Rightarrow \quad n > 1999.5.
+\]
+
+Por lo tanto, necesitamos al menos $n = 2000$ términos para garantizar que el error sea menor que $10^{-3}$.
+
+\subsubsection{Inciso (b)}
+
+Ahora, queremos determinar cuántos términos de la serie de Maclaurin para $\arctan(1)$ debemos sumar para que el valor aproximado de $\pi$ esté dentro de $10^{-10}$. Recordemos que la serie de Maclaurin para $\arctan(x)$ está dada por:
+
+\[
+\arctan(1) = \sum_{i=1}^{\infty} (-1)^{i+1} \frac{1}{2i-1} = \frac{\pi}{4}.
+\]
+
+Por lo tanto, la suma parcial de los primeros $n$ términos está dada por:
+
+\[
+P_n(1) = \sum_{i=1}^{n} (-1)^{i+1} \frac{1}{2i-1},
+\]
+
+y queremos que el error al truncar la serie sea menor que $10^{-10}$. Al igual que en el inciso anterior, multiplicamos la suma parcial por 4 para aproximar $\pi$:
+
+\[
+4P_n(1) = 4 \sum_{i=1}^{n} (-1)^{i+1} \frac{1}{2i-1}.
+\]
+
+El objetivo es encontrar el número de términos $n$ tal que:
+
+\[
+|4P_n(1) - \pi| < 10^{-10}.
+\]
+
+\paragraph{ Paso 1: Estimación del error}
+
+Como se trata de una serie alternada, el error al truncar la serie está acotado por el valor absoluto del primer término no sumado, es decir, por:
+
+\[
+\left| 4P_n(1) - \pi \right| \approx 4 \left| (-1)^{n+1} \frac{1}{2n+1} \right| = \frac{4}{2n+1}.
+\]
+
+\paragraph{ Paso 2: Desigualdad para el error}
+
+Queremos que el error sea menor que $10^{-10}$, por lo que planteamos la siguiente desigualdad:
+
+\[
+\frac{4}{2n+1} < 10^{-10}.
+\]
+
+\paragraph{ Paso 3: Resolución de la desigualdad}
+
+Resolvemos la desigualdad para $n$:
+
+\[
+\frac{4}{2n+1} < 10^{-10} \quad \Rightarrow \quad 4 < 10^{-10} (2n+1)
+\]
+
+\[
+4 < 0.0000000001 (2n+1) \quad \Rightarrow \quad \frac{4}{0.0000000001} < 2n+1
+\]
+
+\[
+4 \times 10^{10} < 2n+1 \quad \Rightarrow \quad 2n > 4 \times 10^{10} - 1
+\]
+
+\[
+2n > 39999999999 \quad \Rightarrow \quad n > 19999999999.5.
+\]
+
+Por lo tanto, necesitamos al menos $n = 20000000000$ términos para garantizar que el error sea menor que $10^{-10}$.
+
+
+\end{document}
+
+

@@ -1,0 +1,39 @@
+Algoritmo Mayor_Menor_Intermedio
+	Definir N1,N2 ,N3 Como Entero
+	Leer N1, N2, N3;
+
+	Si (n1<>n2) y (n1<>n3) y (n2<>n1) y (n2<>n3) Entonces
+	//El número mayor como n1
+		//Intermedio es n2
+		Si (n1>n2) y (n1>n3) y (n2>n3) Entonces
+		Escribir  "El digito mayor es " , n1, ". El digito intermedio es " , n2, ". El digito menor es " , n3;
+		FinSi
+		//Intermedio es n3
+		Si (n1>n2) y (n1>n3) y (n3>n2) Entonces
+			Escribir "El digito mayor es " , n1, ". El digito intermedio es " , n3, ". El digito menor es " , n2;
+		FinSi
+		
+		//El número mayor como n2
+		//Intermedio es n1
+		Si (n2>n1) y (n2>n3) y (n1>n3) Entonces
+			Escribir  "El digito mayor es " , n2, ". El digito intermedio es " , n1, ". El digito menor es " , n3;
+		FinSi
+		//Intermedio es n3
+		Si (n2>n1) y (n2>n3) y (n3>n1) Entonces
+			Escribir "El digito mayor es " , n2, ". El digito intermedio es " , n3, ". El digito menor es " , n1;
+		FinSi
+		
+		//El número mayor como n3
+		//Intermedio es n1
+		Si (n3>n1) y (n3>n2) y (n1>n2) Entonces
+			Escribir  "El digito mayor es " , n3, ". El digito intermedio es " , n1, ". El digito menor es " , n2;
+		FinSi
+		//Intermedio es n2
+		Si (n3>n1) y (n3>n2) y (n2>n1) Entonces
+			Escribir "El digito mayor es " , n3, ". El digito intermedio es " , n2, ". El digito menor es " , n1;
+		FinSi
+		
+	SiNo	
+	Escribir "Números iguales no validos"
+	Fin si
+FinAlgoritmo

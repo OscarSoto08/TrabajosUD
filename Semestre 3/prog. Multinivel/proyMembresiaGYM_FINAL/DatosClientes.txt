@@ -1,0 +1,3 @@
+CL001;Camilo;Bogotá;camilo@gmail.com;555-666-777;16/10/2006
+CL002;Daniel;Valledupar;daniel@gmail.com;888-444-111;20/02/2002
+CL003;Duvan;Medellín;duvan@gmail.com;222-333-000;7/09/1997

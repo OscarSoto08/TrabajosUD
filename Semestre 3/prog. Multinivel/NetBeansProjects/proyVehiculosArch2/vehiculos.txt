@@ -1,0 +1,4 @@
+Carro;abc123;suzuqui;2023;0;4500000000
+Moto;cvg45;yamaha;2000;150;120000000
+Moto;uyb126;Volkswagen;2018;150;9800000000
+Carro;aet843;Mercedes;2020;0;4880000

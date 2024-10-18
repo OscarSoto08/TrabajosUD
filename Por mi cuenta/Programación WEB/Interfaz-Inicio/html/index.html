@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio HTML</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/gsap-public/minified/gsap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="block1"></div>
+    <div class="block2"></div>
+    <div class="block3"></div>
+    <div class="loader">
+        <ul>
+            <li>B</li>
+            <li>I</li>
+            <li>E</li>
+            <li>N</li>
+            <li>V</li>
+            <li>E</li>
+            <li>N</li>
+            <li>I</li>
+            <li>D</li>
+            <li>@</li>
+        </ul>
+    </div>
+    <div class="login-page">
+        <header>
+            <div class="logo-cabecera"><h2>ATK (Taekwondo Kopulso APP)</h2></div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contact-us.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container-login" id="container-login" style="display: none;">
+            <div class="log-card">
+                <div class="log-box">
+                    <div class="form-logo">
+                        <img src="/img/image.png" alt="logo-kopulso" id="logo" class="logo">
+                    </div>
+                    <div class="form-title">
+                        <h4>Inicio de sesión</h4>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password"  class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <button class="login-btn">Iniciar</button>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="container-home" id="container-home" style="display: none;">
+            <div class="corredor-home"></div>
+            <h2>ESTE ES EL INICIO</h2>
+        </div>
+        <div class="container-contact" id="container-contact"style="display: none;">
+            <h2>Este es el registro</h2>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
