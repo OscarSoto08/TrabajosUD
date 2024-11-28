@@ -8,9 +8,6 @@ package modelo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,7 +30,6 @@ public class ConexionBD {
     private String clave;
     /** Mensaje que indica el estado de la conexión. */
     private String mensaje;
-
     /**
      * Constructor de la clase ConexionBD.
      * Establece los valores predeterminados para la conexión a la base de datos.
