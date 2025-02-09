@@ -1,0 +1,168 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+Created on : 28/11/2024, 4:35:47 p. m.
+Author     : oscar
+*/
+body{
+background-color: #F6E8EA;
+}
+
+#logo{
+width: 55px;
+height: 55px;
+border-radius: 50%;
+}
+.nav-item{
+display: flex;
+align-items: center;
+margin: 0 15px;
+}
+
+.row{
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-nav{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.card{
+height: 400px;
+overflow-y: scroll;
+}
+
+.enlace-animado {
+display: inline-block;
+position: relative;
+padding: 10px 25px;
+color: #fff;
+background-color: #007bff;
+text-decoration: none;
+border-radius: 25px;
+overflow: hidden;
+transition: all 0.3s ease;
+}
+
+.enlace-animado::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background-color: #0056b3;
+transform: skewX(-20deg);
+z-index: -1;
+transition: all 0.3s ease;
+}
+
+.enlace-animado:hover {
+color: #000;
+transform: translateY(-5px);
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.enlace-animado:hover::before {
+left: 100%;
+}
+
+/* Para el scroll-bar */
+::-webkit-scrollbar {
+width: 8px; /* Ancho de la scrollbar */
+}
+
+::-webkit-scrollbar-track {
+background: rgba(255, 255, 255, 0.1); /* Color de fondo del track */
+border-radius: 10px; /* Bordes redondeados para el track */
+}
+
+::-webkit-scrollbar-thumb {
+background: rgba(0, 0, 0, 0.2); /* Color del thumb */
+border-radius: 10px; /* Bordes redondeados para el thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgba(0, 0, 0, 0.3); /* Color del thumb al pasar el mouse */
+}
+
+.form-container {
+    margin: 0    auto;
+
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #37474f; /* Color de texto gris oscuro */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #757575; /* Color de texto gris */
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cfd8dc; /* Borde gris claro */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #64b5f6; /* Color de borde azul al enfocar */
+    box-shadow: 0 0 5px rgba(100, 181, 246, 0.5); /* Sombra al enfocar */
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+  margin: 12px auto 0 auto;
+  padding: 12px;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Damion", cursive;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  color: black;
+  transition: 500ms;
+}
+
+.btn-info{ background: #29b6f6;}
+.btn-danger{  background: #f44336;}
+.btn-success{ background: #66bb6a; }
+.btn:hover {
+  color: #787276;
+  transition: 500ms;
+}
